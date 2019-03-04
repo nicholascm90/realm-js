@@ -44,7 +44,7 @@ function shouldSkip(filter) {
  * Skips the test if the values provided in `filter` matches that of the environment.
  * Use this to skip particular tests based on the environment, if we for example have a failing test which is not
  * applicable for the environment or if we want to eventually fix it, but doesn't want the tests to fail right now.
- * 
+ *
  * @argument filter can be an object, an array or a string. If an object is provided every key with value `true` will
  * skip the test if the same key has a "truly" value (a true boolean, a string, etc). If an array is provided it will
  * be turned into an object with the array elements as keys and `true` values and `skipIf` will be called recursively.
@@ -52,7 +52,7 @@ function shouldSkip(filter) {
  * value for that single property.
  */
 function skipIf(filter, title, callback) {
-    if (typeof filter === 'string') {
+    if (typeof filter === "string") {
         return skipIf({ [filter]: true }, title, callback);
     } else if (Array.isArray(filter)) {
         const filterObject = {};
