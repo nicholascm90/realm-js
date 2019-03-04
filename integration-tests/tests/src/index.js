@@ -42,6 +42,8 @@ global.it.skipIf = require("./utils/skip-if");
 describe(global.title, () => {
     require("./realm-constructor");
     require("./dynamic-schema-updates");
+    require("./sync-credentials");
+    require("./sync-user");
 });
 
 afterEach(() => {
